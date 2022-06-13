@@ -1,0 +1,26 @@
+// color pallete used for the website colors
+
+$card-bg: hsl(0, 0%, 100%); // white
+$card-text: hsl(212, 45%, 89%); // light gray
+$main-bg: hsl(220, 15%, 55%); // grayish blue
+$dark-blue: hsl(218, 44%, 22%); // dark blue
+
+// color map
+$colors: (
+  "card-bg": $card-bg,
+  "card-text": $card-text,
+  "main-bg": $main-bg,
+  "dark-blue": $dark-blue,
+);
+
+
+// Create a function to iterate through the color map
+// and return the required color based on the arguments passed
+
+@function color($color) {
+  @if (map-has-key($map: $colors, $key: $color)) {
+    @return map-get($map: $colors, $key: $color);
+  } @else {
+    @error "Invalid color value passed to function, valid values are 'card-bg', 'card-text', 'main-bg', 'dark-blue";
+  }
+}
