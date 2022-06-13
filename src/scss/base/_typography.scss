@@ -1,4 +1,10 @@
 /**
  * Basic typography style for copy text
  */
- 
+
+@use "../utils/" as *; // files containing reusable pieces of code are imported using the @use directive
+
+body {
+  font-family: $primary-font, sans-serif;
+  font-weight: weight("normal");
+}

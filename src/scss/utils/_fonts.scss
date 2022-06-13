@@ -1,0 +1,22 @@
+$primary-font: "Outfit";
+
+// Create a function set the font-weight, by selecting one from the two provided by google @import rule (400, 700)
+$normal: 400;
+$bold: 700;
+
+// Create a map to hold the valid values
+$weights: (
+  "normal": $normal,
+  "bold": $bold,
+);
+
+@function weight($weight) {
+  // valid values (400, 700)
+  @if (map-has-key($map: $weights, $key: $weight)) {
+    @return map-get($map: $weights, $key: $weight);
+  } @else {
+    @error "Invalid font weight value, allowed values are: 'normal' and 'bold'.";
+  }
+}
+
+//! test the above function
