@@ -1,0 +1,13 @@
+@charset "utf-8"; // avoids any potential issues with character encoding
+
+// 1. Vendors
+@forward "vendors";
+
+// 2. Base stuff
+@forward "base";
+
+// 3. Layout-related sections
+@forward "layout";
+
+// 4. Page specific styles
+@forward "pages";
