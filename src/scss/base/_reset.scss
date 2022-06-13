@@ -1,3 +1,25 @@
 // -----------------------------------------------------------------------------
 // This file contains very basic styles. Alternatively, called _base.scss
 // -----------------------------------------------------------------------------
+
+/**
+* Change the font size using a relative value, 
+* this will still allow the user to change the default font size from the browser settings. 
+* An absolute value would prevent changing the default font size from the browser thus affecting accessibility.
+*/
+html {
+  box-sizing: inherit;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
