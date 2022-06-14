@@ -10,6 +10,11 @@ $small: math.div(375px, 16px) * 1em;
 $medium: math.div(700px, 16px) * 1em;
 $large: math.div(1440px, 16px) * 1em;
 
+/// Breakpoints map, gathering all breakpoints for the application
+/// @access private
+/// @type Map
+/// @prop {String} key - breakpoint's name
+/// @prop {Number} value - breakpoint's value
 $breakpoints: (
   'small': $small,
   'medium': $medium,
