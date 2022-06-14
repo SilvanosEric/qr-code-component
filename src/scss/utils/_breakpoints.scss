@@ -1,0 +1,40 @@
+// Media query breakpoints are based on the browsers default font size settings. Not on the root html elmeent font size. Most browser settings have a default font size of 16px
+
+
+// breakpoints: 
+// Mobile: 375px;
+// Desktop: 1440px;
+@use "sass:math";
+
+$small: math.div(375px, 16px) * 1em;
+$medium: math.div(700px, 16px) * 1em;
+$large: math.div(1440px, 16px) * 1em;
+
+$breakpoints: (
+  'small': $small,
+  'medium': $medium,
+  'large': $large,
+);
+
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media (min-width: #{$query}) { // made use of a mobile first approach
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
