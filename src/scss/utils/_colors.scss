@@ -23,7 +23,7 @@ $colors: (
 /// @return {String | Number}
 /// @require $colors
 @function color($color) {
-  @if (map-has-key($map: $colors, $key: $color)) {
+  @if map-has-key($map: $colors, $key: $color) {
     @return map-get($map: $colors, $key: $color);
   } @else {
     @error "Invalid color value passed to function, valid values are 'card-bg', 'card-text', 'main-bg', 'dark-blue";

@@ -12,7 +12,7 @@ $weights: (
 
 @function weight($weight) {
   // valid values (400, 700)
-  @if (map-has-key($map: $weights, $key: $weight)) {
+  @if map-has-key($map: $weights, $key: $weight) {
     @return map-get($map: $weights, $key: $weight);
   } @else {
     @error "Invalid font weight value, allowed values are: 'normal' and 'bold'.";
