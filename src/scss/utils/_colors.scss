@@ -5,7 +5,11 @@ $card-text: hsl(212, 45%, 89%); // light gray
 $main-bg: hsl(220, 15%, 55%); // grayish blue
 $dark-blue: hsl(218, 44%, 22%); // dark blue
 
-// color map
+/// colors map, gathering all the colors to be used by the webpage
+/// @access private
+/// @type map
+/// @prop {String} key - Color's name
+/// @prop {Number} value - color value in HSL mapped to the key
 $colors: (
   "card-bg": $card-bg,
   "card-text": $card-text,
@@ -13,10 +17,11 @@ $colors: (
   "dark-blue": $dark-blue,
 );
 
-
-// Create a function to iterate through the color map
-// and return the required color based on the arguments passed
-
+/// Get a color HSL, value from color name
+/// @access public
+/// @param {String} $color - Color's name
+/// @return {String | Number}
+/// @require $colors
 @function color($color) {
   @if (map-has-key($map: $colors, $key: $color)) {
     @return map-get($map: $colors, $key: $color);
