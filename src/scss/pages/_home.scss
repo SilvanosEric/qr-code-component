@@ -1,1 +1,33 @@
 @use "../utils/" as *;
+
+body {
+  background-color: color('body-bg');
+}
+
+p {
+  font-size: $paragraph;
+}
+
+// After comparing the advantages and disadvantages of nesting elements in BEM,
+// my opinionated decision is only to nest pseudoclasses(::before and ::after) and states (:hover, :active, etc)
+.card {
+  background-color: color('card-bg');
+  padding: 1em;
+  padding-bottom: 2.5em;
+  border-radius: $border-radius;
+  text-align: center;
+}
+
+.card__img {
+  border-radius: $border-radius;
+  margin-bottom: 1.5em;
+}
+
+.card__title {
+  font-size: 1.4em;
+  margin-bottom: .8em;
+}
+
+.card__text {
+  color: color(card-text);
+}

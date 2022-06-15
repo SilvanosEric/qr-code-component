@@ -8,7 +8,7 @@
 * An absolute value would prevent changing the default font size from the browser thus affecting accessibility.
 */
 html {
-  box-sizing: inherit;
+  box-sizing: border-box;
   font-size: 62.5%;
 }
 

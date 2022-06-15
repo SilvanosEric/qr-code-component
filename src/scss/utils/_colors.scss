@@ -1,9 +1,9 @@
 // color pallete used for the website colors
 
 $card-bg: hsl(0, 0%, 100%); // white
-$card-text: hsl(212, 45%, 89%); // light gray
-$main-bg: hsl(220, 15%, 55%); // grayish blue
-$dark-blue: hsl(218, 44%, 22%); // dark blue
+$body-bg: hsl(212, 45%, 89%); // light gray
+$card-text: hsl(220, 15%, 55%); // grayish blue
+$card-outline: hsl(218, 44%, 22%); // dark blue
 
 /// colors map, gathering all the colors to be used by the webpage
 /// @access private
@@ -13,8 +13,8 @@ $dark-blue: hsl(218, 44%, 22%); // dark blue
 $colors: (
   "card-bg": $card-bg,
   "card-text": $card-text,
-  "main-bg": $main-bg,
-  "dark-blue": $dark-blue,
+  "body-bg": $body-bg,
+  "card-outline": $card-outline,
 );
 
 /// Get a color HSL, value from color name
