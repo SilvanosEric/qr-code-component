@@ -26,6 +26,7 @@ $colors: (
   @if map-has-key($map: $colors, $key: $color) {
     @return map-get($map: $colors, $key: $color);
   } @else {
-    @error "Invalid color value passed to function, valid values are 'card-bg', 'card-text', 'main-bg', 'dark-blue";
+    @error "There is no color named `#{$color}` in $colors. " +
+    "Color should be one of #{map-keys($map: $colors)}.";
   }
 }

@@ -15,8 +15,7 @@ $weights: (
   @if map-has-key($map: $weights, $key: $weight) {
     @return map-get($map: $weights, $key: $weight);
   } @else {
-    @error "Invalid font weight value, allowed values are: 'normal' and 'bold'.";
+    @error "There is no font weight named `#{$weight}` in $weights. " +
+    "Font weight should be one of #{map-keys($weights)}.";
   }
 }
-
-//! test the above function
