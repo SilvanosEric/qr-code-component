@@ -2,7 +2,7 @@
 
 $card-bg: hsl(0, 0%, 100%); // white
 $body-bg: hsl(212, 45%, 89%); // light gray
-$card-text: hsl(220, 15%, 55%); // grayish blue
+$card-copy: hsl(220, 15%, 55%); // grayish blue
 $card-outline: hsl(218, 44%, 22%); // dark blue
 
 /// colors map, gathering all the colors to be used by the webpage
@@ -12,7 +12,7 @@ $card-outline: hsl(218, 44%, 22%); // dark blue
 /// @prop {Number} value - color value in HSL mapped to the key
 $colors: (
   "card-bg": $card-bg,
-  "card-text": $card-text,
+  "card-copy": $card-copy,
   "body-bg": $body-bg,
   "card-outline": $card-outline,
 );
