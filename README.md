@@ -76,7 +76,7 @@ To center more than one item use the following CSS property
 
 ### Useful resources
 
-- [Deploying a subfolder to GitHub Pages](https://gist.github.com/cobyism/4730490) - This was really helpful as it allowed me to have my source code (solution) and live site, on the same repo. The live site is hosted inside the dist folder.
+- [Deploying a subfolder to GitHub Pages](https://sangsoonam.github.io/2019/02/08/using-git-worktree-to-deploy-github-pages.html) - This was really helpful as it allowed me to have my source code (solution) and live site, on the same repo. The live site is hosted inside the dist folder.
 
 ## Author
 
